@@ -12,14 +12,15 @@
 
 <body>
     <nav>
-        <div class="container">
+        <div class="base-container">
             <div>
-                <a class="logo" href="{% url 'wines:home' %}">Ladder to Wine</a>
+                <a class="base-logo" href="{% url 'wines:home' %}">Ladder to Wine</a>
             </div>
             <form method="post" action="{% url 'wines:search' %}">
                 {% csrf_token %}
-                <div class="search-bar">
+                <div class="base-search-bar">
                     <input type="search" placeholder="와인 검색" aria-label="Search" id="searched" name="searched">
+                    <input type="submit" value="검색" class="search-btn">
                 </div>
 
             </form>
@@ -39,7 +40,7 @@
                             </span></a>
                     </div>
                     <div>
-                        <a class="" href="/logout"> 로그아웃 </a>
+                        <a href="/logout"> 로그아웃 </a>
                     </div>
                     {% endif %}
                 </form>
@@ -56,7 +57,7 @@
 
     <footer class="footer">
         <nav>
-            <div class="footer-content">
+            <div>
                 <span>LADDER BUSINESS PLATFORM Copyright © Ladder Corp. All Rights Reserved.</span>
             </div>
         </nav>
